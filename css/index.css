@@ -22,7 +22,7 @@ a.logo {
 }
 .search-default input {
     padding: 5px 20px;
-    border: 1px solid #eee;
+    border: 1px solid #fff;
     border-radius: 20px;
     background-color: #eee;
     font-size: 14px;
@@ -41,16 +41,35 @@ a.logo {
         height: 60px;
         border: none;
     }
-    .navbar-nav {
+    ul.navbar-nav {
         height: inherit;
+    }
+    li.nav-item {
+        position: relative;
+        margin: 0 5px; 
+    }
+    a.link-active {
+        color: #888;
+    }
+    li.nav-item span {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: black;
+
     }
     .nav-link {
         padding: 0;
         height: 60px;
         line-height: 60px;
     }
-    .nav-item:hover {
-        border-bottom: 3px solid #000;
+    .nav-item:hover span{
+        width: 100%;
+        left: 0;
+        transform: scaleX(1);
+        transition: all .2s linear;
     }
     a.logo-lg {
         display: inline-block;
@@ -58,6 +77,9 @@ a.logo {
     .search {
         position: absolute;
         right: 10%;
+    }
+    .search input {
+        width: 150px;
     }
 }
 @media (max-width:768px) {
