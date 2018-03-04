@@ -1,7 +1,32 @@
+/* 回到顶部 start */
+.goto-top {
+    /* display: none; */
+    z-index: 99999;
+    position: fixed;
+    right: 10%;
+    bottom: 20%;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: tomato;
+    opacity: .7;
+    border: 1px solid #000;
+}
+.test {
+    height: 2200px;
+}
+/* 回到顶部 end */
+
 /* 头部公共样式 strat*/
 
 .header {
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1;
+    background-color: #fff;
     box-shadow: 1px 0 1px #000;
 }
 
@@ -21,16 +46,14 @@ a.logo {
     height: 100%;
 }
 .search-default input {
-    padding: 5px 20px;
+    padding: 10px 20px;
     border: 1px solid #fff;
     border-radius: 20px;
     background-color: #eee;
     font-size: 14px;
-    color: aquamarine;
 }
 .navbar-collapse {
     text-align: center;
-    background-color: #fff;
 }
 @media (min-width:768px) {
     .header {
@@ -68,8 +91,7 @@ a.logo {
     .nav-item:hover span{
         width: 100%;
         left: 0;
-        transform: scaleX(1);
-        transition: all .2s linear;
+        transition: all .2s ease-in;
     }
     a.logo-lg {
         display: inline-block;
@@ -89,3 +111,39 @@ a.logo {
 }
  
 /* 头部公共样式 end */
+
+/* 内容部分公共样式 start*/
+.container-default {
+    margin-top: 70px;
+}
+/* 内容部分公共样式 end*/
+
+/* 底部公共样式strat */
+.footer {
+    width: 100%;
+    background-color: blueviolet;
+}
+.footer-wrap {
+    height: 100;
+}
+.footer-main-info {
+    padding: 20px 0 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.footer-main-info ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-main-info ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.footer-others-info {
+    padding: 10px 0;
+    border-top: 1px solid #000;
+    text-align: center;
+    font-size: 12px;
+}
+/* 底部公共样式end */
