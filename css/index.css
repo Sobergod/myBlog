@@ -1,55 +1,69 @@
+/* 头部公共样式 strat*/
+
 .header {
-    height: 50px;
-    border-bottom: 1px solid #f0f0f0;
-}
-.header .container {
-    position: relative;
-    height: 100%;
+    width: 100%;
+    box-shadow: 1px 0 1px #000;
 }
 
-.logo {
-    float: left;
-    margin-right: 20px;
-    line-height: 50px;
+nav.navbar {
+    padding: 0;
     font-size: 20px;
-    font-weight: 700;
 }
-.row {
-    position: relative;
+a.logo {
+    padding: 10px;
 }
-.tab a {
-    padding: 0 10px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 20px;
-    font-weight: 700;
+.logo-sm,
+.logo-md,
+.logo-lg {
+    display: none;
 }
-.search form {
-    position: relative;
-    top: 8px;
-}
-.search input.search-input{
-    margin-left: 20px;
-    padding: 6px 15px;
-    width: 140px;
-    border-radius: 20px;
-    border: none;
-    background-color: #EEEEEE;
-    font-size: 14px;
-}
-.head-sculpture {
-    float: right;
-    padding: 0 10px;
+.navbar-toggler {
     height: 100%;
-    line-height: 50px;
 }
-.head-sculpture-wrap {
-    position: absolute;
-    right: 0;
+.search-default input {
+    padding: 5px 20px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    background-color: #eee;
+    font-size: 14px;
+    color: aquamarine;
 }
-.head-sculpture img {
-    border-radius: 50%;
-    margin-right: 10px;
-    display: inline-block;
-    height: 30px;
+.navbar-collapse {
+    text-align: center;
+    background-color: #fff;
 }
+@media (min-width:768px) {
+    .header {
+        height: 60px;
+    }
+    .nav-default {
+        padding-left: 20px;
+        height: 60px;
+        border: none;
+    }
+    .navbar-nav {
+        height: inherit;
+    }
+    .nav-link {
+        padding: 0;
+        height: 60px;
+        line-height: 60px;
+    }
+    .nav-item:hover {
+        border-bottom: 3px solid #000;
+    }
+    a.logo-lg {
+        display: inline-block;
+    }
+    .search {
+        position: absolute;
+        right: 10%;
+    }
+}
+@media (max-width:768px) {
+    .logo-md {
+        display: inline-block;
+    }
+}
+ 
+/* 头部公共样式 end */
