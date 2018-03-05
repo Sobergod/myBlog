@@ -13,6 +13,7 @@
     background-color: tomato;
     opacity: .7;
     border: 1px solid #000;
+    transition: background-color .3s linear, border .5s linear;
 }
 .test {
     height: 2200px;
