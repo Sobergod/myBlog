@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 var GoTop = {
     goBtn:null,
-    topHeight: 100,
+    topHeight: 800,
     mWindow:$(window),
     init:function(config) {
         this.goBtn = $(config);
@@ -43,7 +43,4 @@ var GoTop = {
             }
         });
     },
-
-
-
 }

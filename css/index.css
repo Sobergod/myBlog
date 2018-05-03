@@ -1,10 +1,10 @@
 /* 回到顶部 start */
-.goto-top {
+.go {
     /* display: none; */
-    z-index: 99999;
+    z-index: 99;
     position: fixed;
-    right: 10%;
-    bottom: 20%;
+    right: 2%;
+    bottom: 40%;
     padding: 5px;
     width: 30px;
     height: 30px;
@@ -14,9 +14,6 @@
     opacity: .7;
     border: 1px solid #000;
     transition: background-color .3s linear, border .5s linear;
-}
-.test {
-    height: 2200px;
 }
 /* 回到顶部 end */
 
@@ -106,6 +103,12 @@ a.logo {
     }
 }
 @media (max-width:768px) {
+    .go {
+        position: unset;
+        width: 100%;
+        border: none;
+        text-align: center;
+    }
     .logo-md {
         display: inline-block;
     }
@@ -115,6 +118,7 @@ a.logo {
 
 /* 内容部分公共样式 start*/
 .container-default {
+    position: relative;
     margin-top: 70px;
 }
 /* 内容部分公共样式 end*/

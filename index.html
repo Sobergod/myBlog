@@ -12,12 +12,6 @@
 </head>
 
 <body>
-    <!-- 回到顶部 strat -->
-    <div class="go">
-        回到顶部
-    </div>
-    <!-- 回到顶部 end -->
-
     <!-- header start 全局头部 -->
     <div class="header">
         <!-- 导航 start-->
@@ -74,33 +68,86 @@
         <!-- 导航 end-->
     </div>
     <!-- header end -->
+    <style>
+        /* Make the image fully responsive */
 
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <!-- container start -->
     <div class="container container-default">
-        <p class="test">这里是内容区域</p>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- 指示符 -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="http://static.runoob.com/images/mix/img_fjords_wide.jpg">
+                    <div class="carousel-caption">
+                        <h3>第一张图片描述标题</h3>
+                        <p>描述文字!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="http://static.runoob.com/images/mix/img_nature_wide.jpg">
+                    <div class="carousel-caption">
+                        <h3>第二张图片描述标题</h3>
+                        <p>描述文字!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                    <div class="carousel-caption">
+                        <h3>第三张图片描述标题</h3>
+                        <p>描述文字!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
     </div>
     <!-- container end -->
-
+    <!-- 回到顶部 strat -->
+    <div class="go goto-top">
+        回到顶部
+    </div>
+    <!-- 回到顶部 end -->
     <!-- footer start 全局底部-->
     <div class="footer">
         <div class="container footer-wrap">
             <div class="row footer-main-info">
-                    <div class="col-md-4 col-sm-12">
-                        <p>陈敬衡的小网站</p>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <ul>
-                            <li>微博</li>
-                            <li>github</li>
-                            <li>邮箱</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <span>其他</span>
-                    </div>
+                <div class="col-md-4 col-sm-12">
+                    <p>陈敬衡的小网站</p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <ul>
+                        <li>微博</li>
+                        <li>github</li>
+                        <li>邮箱</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <span>其他</span>
+                </div>
             </div>
             <div class="footer-others-info">
-                <p >Dolorem possimus rerum hic non quo commodi voluptatem et voluptas.</p>
+                <p>Dolorem possimus rerum hic non quo commodi voluptatem et voluptas.</p>
             </div>
         </div>
     </div>
