@@ -1,46 +1,38 @@
-$(document).ready(function(){
-    $(function() {
-        GoTop.init(".go").addGotoTop();
+$(document).ready(function () {
+    $(function () {
+        // GoTop.init(".go").addGotoTop();
+        var gotoTop = new GotoTop('.go')
+        gotoTop.addGotoTop();
     });
 });
-
-var GoTop = {
-    goBtn:null,
-    topHeight: 800,
-    mWindow:$(window),
-    init:function(config) {
-        this.goBtn = $(config);
-        this.bind();
-        return this;
-    },
-
-    bind:function() {
-        var self = this;
-        this.goBtn.on("click",function() {
-            self.gotoTop();
+function GotoTop(goBtn) {
+    var topHeight = 800,
+        mWindow = $(window);
+    this.goBtn = $(goBtn);
+    function bind(goBtn) {
+        goBtn.on("click", function () {
+            gotoTop();
         })
-    },
-
-    gotoTop: function() {
-        $('html , body').animate({scrollTop: 0},'slow');
-    },
-
-    checkTop:function() {
-        if(this.mWindow.scrollTop() > this.topHeight) {
+    }
+    function gotoTop() {
+        $('html , body').animate({ scrollTop: 0 }, 'slow');
+    }
+    function checkTop() {
+        if (mWindow.scrollTop() > topHeight) {
             return true;
         } else {
             return false;
         }
-    },
-
-    addGotoTop:function() {
-        var self = this;
-        this.mWindow.scroll(function() {
-            if(self.checkTop()) {
-                self.goBtn.addClass("goto-top");
+    }
+    this.addGotoTop = function () {
+        bind(this.goBtn);
+        var that = this;
+        mWindow.scroll(function () {
+            if (!checkTop()) {
+                that.goBtn.addClass("go-top");
             } else {
-                self.goBtn.removeClass("goto-top");
+                that.goBtn.removeClass("go-top");
             }
-        });
-    },
+        })
+    }
 }

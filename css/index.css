@@ -15,6 +15,9 @@
     border: 1px solid #000;
     transition: background-color .3s linear, border .5s linear;
 }
+.go-top {
+    display: none;
+}
 /* 回到顶部 end */
 
 /* 头部公共样式 strat*/
