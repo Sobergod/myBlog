@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $(function () {
-        // GoTop.init(".go").addGotoTop();
         var gotoTop = new GotoTop('.go')
         gotoTop.addGotoTop();
     });
